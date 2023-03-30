@@ -54,7 +54,7 @@ class ContactPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 14),
                       textStyle: const TextStyle(fontSize: 20),
-                      primary: Theme.of(context).primaryColorDark,
+                      foregroundColor: Theme.of(context).primaryColorDark,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -77,7 +77,7 @@ class ContactPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 14),
                       textStyle: const TextStyle(fontSize: 20),
-                      primary: Theme.of(context).primaryColorDark,
+                     foregroundColor: Theme.of(context).primaryColorDark,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -102,7 +102,7 @@ class ContactPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 14),
                       textStyle: const TextStyle(fontSize: 20),
-                      primary: Theme.of(context).primaryColorDark,
+                     foregroundColor: Theme.of(context).primaryColorDark,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -128,7 +128,7 @@ class ContactPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 14),
                       textStyle: const TextStyle(fontSize: 20),
-                      primary: Theme.of(context).primaryColorDark,
+                    foregroundColor: Theme.of(context).primaryColorDark,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -152,7 +152,7 @@ class ContactPage extends StatelessWidget {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 20, vertical: 14),
                       textStyle: const TextStyle(fontSize: 20),
-                      primary: Theme.of(context).primaryColorDark,
+                     foregroundColor: Theme.of(context).primaryColorDark,
                     ),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,

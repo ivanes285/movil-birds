@@ -80,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                               getPlacesByCategory(category, search);
                             },
                             decoration: InputDecoration(
-                              hintText: "Busca un lugar",
+                              hintText: "Busca una ave",
                              
                               hintStyle: const TextStyle(color: Colors.white),
                               prefixIcon: const Icon(Icons.search),
@@ -166,7 +166,9 @@ class _HomePageState extends State<HomePage> {
       final categoriesProvider =
           Provider.of<CategoriesProviders>(context, listen: false);
       listCategory = await categoriesProvider.getCategories();
+   
       listCategory.insert(0, CategoriesModel(name: 'All'));
+
       setState(() => loadingCategories = false);
     } catch (e) {
       log('$e');
@@ -194,6 +196,9 @@ class _HomePageState extends State<HomePage> {
       final eventsProviders =
           Provider.of<EventsProviders>(context, listen: false);
       listEventos = await eventsProviders.getEvents();
+      // print("EVENTOS: ${listEventos.length}");
+      log("EVENTOS: ${listEventos.length}");
+      log(listEventos[0].title!);
       // await Future.delayed(const Duration(milliseconds: 100));
       setState(() => loadingEvents = false);
     } catch (e) {

@@ -7,8 +7,8 @@ import 'package:app_turismo/utils/check_internet_connection.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:map_launcher/map_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
+// import 'package:map_launcher/map_launcher.dart';
 
 ConnectionStatus status = ConnectionStatus.online;
 
@@ -98,23 +98,24 @@ class _PlaceDetailState extends State<PlaceDetail> {
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        InkWell(
-                          onTap: () => {_makePhoneCall(lugar.contact!)},
-                          child: Column(
-                            children: const [
-                              Icon(
-                                Icons.call,
-                                color: Colors.white,
-                                size: 30.0,
-                              ),
-                              SizedBox(height: 8.0),
-                              Center(
-                                  child: Text("Contacto",
-                                      style: TextStyle(color: Colors.white)))
-                            ],
-                          ),
-                        ),
+                      children: [ 
+                        /* OPCION DE LLAMAR */
+                        // InkWell(
+                        //   onTap: () => {_makePhoneCall(lugar.contact!)},
+                        //   child: Column(
+                        //     children: const [
+                        //       Icon(
+                        //         Icons.call,
+                        //         color: Colors.white,
+                        //         size: 30.0,
+                        //       ),
+                        //       SizedBox(height: 8.0),
+                        //       Center(
+                        //           child: Text("Contacto",
+                        //               style: TextStyle(color: Colors.white)))
+                        //     ],
+                        //   ),
+                        // ),
                         InkWell(
                           onTap: () => {
                             _onShareWithResult(context, lugar.title),
@@ -134,33 +135,35 @@ class _PlaceDetailState extends State<PlaceDetail> {
                             ],
                           ),
                         ),
-                        InkWell(
-                          onTap: () async {
-                            final disponible = await MapLauncher.isMapAvailable(
-                                MapType.google);
-                            if (disponible!) {
-                              await MapLauncher.showMarker(
-                                  mapType: MapType.google,
-                                  coords: Coords(double.parse(lugar.lat!),
-                                      double.parse(lugar.lng!)),
-                                  title: lugar.title!.toUpperCase(),
-                                  extraParams: {});
-                            }
-                          },
-                          child: Column(
-                            children: const [
-                              Icon(
-                                Icons.near_me,
-                                color: Colors.white,
-                                size: 30.0,
-                              ),
-                              SizedBox(height: 8.0),
-                              Center(
-                                  child: Text("Ruta",
-                                      style: TextStyle(color: Colors.white)))
-                            ],
-                          ),
-                        ),
+
+                        /* OPCION DE MAPA */
+                        // InkWell(
+                        //   onTap: () async {
+                        //     final disponible = await MapLauncher.isMapAvailable(
+                        //         MapType.google);
+                        //     if (disponible!) {
+                        //       await MapLauncher.showMarker(
+                        //           mapType: MapType.google,
+                        //           coords: Coords(double.parse(lugar.lat!),
+                        //               double.parse(lugar.lng!)),
+                        //           title: lugar.title!.toUpperCase(),
+                        //           extraParams: {});
+                        //     }
+                        //   },
+                        //   child: Column(
+                        //     children: const [
+                        //       Icon(
+                        //         Icons.near_me,
+                        //         color: Colors.white,
+                        //         size: 30.0,
+                        //       ),
+                        //       SizedBox(height: 8.0),
+                        //       Center(
+                        //           child: Text("Ruta",
+                        //               style: TextStyle(color: Colors.white)))
+                        //     ],
+                        //   ),
+                        // ),
                       ],
                     ),
                     Container(
@@ -218,12 +221,13 @@ class _PlaceDetailState extends State<PlaceDetail> {
                         size: 18.0,
                       ),
                     ]),
-                    Text(
-                      lugar.parroquia!,
-                      style: Themas.whiteTextStyle
-                          .copyWith(fontSize: 14, fontWeight: Themas.regular),
-                      textAlign: TextAlign.justify,
-                    )
+                       /* PARROQUIA */
+                    // Text(
+                    //   lugar.parroquia!,
+                    //   style: Themas.whiteTextStyle
+                    //       .copyWith(fontSize: 14, fontWeight: Themas.regular),
+                    //   textAlign: TextAlign.justify,
+                    // )
                   ],
                 ),
               ),
@@ -233,22 +237,22 @@ class _PlaceDetailState extends State<PlaceDetail> {
   }
 }
 
-Future<void> _makePhoneCall(String phoneNumber) async {
-  final Uri launchUri = Uri(
-    scheme: 'tel',
-    path: phoneNumber,
-  );
+// Future<void> _makePhoneCall(String phoneNumber) async {
+//   final Uri launchUri = Uri(
+//     scheme: 'tel',
+//     path: phoneNumber,
+//   );
 
-  await launchUrl(launchUri);
-}
+//   await launchUrl(launchUri);
+// }
 
 void _onShareWithResult(BuildContext context, lugar) async {
   final box = context.findRenderObject() as RenderBox?;
   ShareResult result;
   String titulo = lugar.toString().toUpperCase();
   result = await Share.shareWithResult(
-      'Ven a $titulo, para mas información visita la página WEB https://pedromoncayoturistico.com/ o descarga nuestra aplicación móvil en la Play Store📱🤳 "Pedro Moncayo Turístico"',
-      subject: 'Lugar Turístico de Pedro Moncayo',
+      'Ven a $titulo, para mas información visita la página WEB https://aviturismopuertoquito.com/ o descarga nuestra aplicación móvil en la Play Store📱🤳 "Turismo Puerto Quito"',
+      subject: 'Avistamiento de Aves en Puerto Quito',
       sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
 
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -260,41 +264,4 @@ void _onShareWithResult(BuildContext context, lugar) async {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// class _PlaceDetailState extends State<PlaceDetail> {
-// LugaresModel get lugar=> widget.lugar;
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//     body: Center(
-//     child:Text(lugar.title!)
-//     ) ,
-//     );
-//   }
-// }
 

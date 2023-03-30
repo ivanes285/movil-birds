@@ -18,7 +18,7 @@ class PlacesProviders extends ChangeNotifier {
     Uri uri = Uri.parse(url);
     var response = await http.get(uri);
     final jsonResponse = json.decode(response.body);
-    List list = jsonResponse['places'];
+    List list = jsonResponse['birds'];
     lugares = list.map((e) => LugaresModel.fromJson(e)).toList();
     notifyListeners();
     return lugares;
