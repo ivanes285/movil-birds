@@ -254,6 +254,7 @@ void _onShareWithResult(BuildContext context, lugar) async {
       'Ven a $titulo, para mas información visita la página WEB https://aviturismopuertoquito.com/ o descarga nuestra aplicación móvil en la Play Store📱🤳 "Turismo Puerto Quito"',
       subject: 'Avistamiento de Aves en Puerto Quito',
       sharePositionOrigin: box!.localToGlobal(Offset.zero) & box.size);
+      
 
   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
     content: Text("Share result: ${result.status}"),

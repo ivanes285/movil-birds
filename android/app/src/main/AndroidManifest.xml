@@ -21,7 +21,7 @@
     </intent>
 </queries>
    <application
-        android:label="Pedro Moncayo Turístico"
+        android:label="Puerto Quito Turístico"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">

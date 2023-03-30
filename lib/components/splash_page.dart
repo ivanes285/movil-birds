@@ -36,7 +36,7 @@ class _SplashPageState extends State<SplashPage> {
               const SizedBox(
                 height: 50.0,
               ),
-              const Text("Pedro Moncayo Turístico",
+              const Text("Puerto Quito Turístico",
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 25.0,

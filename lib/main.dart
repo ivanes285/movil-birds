@@ -19,7 +19,6 @@ void main() {
     ChangeNotifierProvider(create: (_) => PlacesProviders()),
     ChangeNotifierProvider(create: (_) => ConnectionStatusChangeNotifier()),
     ChangeNotifierProvider(create: (_) => ThemeProvider()),
-   
   ], child: const MyApp()));
 }
 
