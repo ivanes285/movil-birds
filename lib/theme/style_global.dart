@@ -1,16 +1,17 @@
-
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Themas {
   static double defaultMargin = 20.0;
   static double defaultBorder = 20.0;
-  static Color kWhiteColor = const Color(0xffFFFFFF);
-  static Color kWhiteColord = const Color.fromARGB(255, 126, 122, 122);
-  static Color kBackgroundColor = const Color(0xff1A1A1A);
-  static Color kBackgroundColorButton = const Color(0xff111B21);
-  static Color kGreyColor = const Color(0xff202C33);
-  static Color kPrimaryColor = const Color(0xffFEBE02);
+  static Color kWhiteColor = Color.fromARGB(255, 44, 44, 44);
+  static Color kWhiteColord = Color.fromARGB(255, 227, 227, 227);
+  static Color kBackgroundColor = Color.fromARGB(255, 11, 25, 99);
+  static Color kBackgroundColorButton = Color.fromARGB(255, 28, 172, 216);
+  static Color kGreyColor = Color(0xff202C33);
+  static Color kPrimaryColor = Color.fromARGB(255, 1, 32, 61);
+  static Color titleColor = Color.fromARGB(255, 28, 172, 216);
+  
   static TextStyle whiteTextStyle = GoogleFonts.poppins(
     color: kWhiteColor,
   );
@@ -20,6 +21,11 @@ class Themas {
   static TextStyle yellowTextStyle = GoogleFonts.poppins(
     color: kPrimaryColor,
   );
+
+  static TextStyle titleTextStyle = GoogleFonts.poppins(
+    color: titleColor,
+  );
+
   static FontWeight light = FontWeight.w300;
   static FontWeight regular = FontWeight.w400;
   static FontWeight medium = FontWeight.w500;

@@ -106,7 +106,7 @@ class _HomePageState extends State<HomePage> {
                       Row(
                         children:  [
                           const SizedBox(width: 6),
-                          Text("Lugares",
+                          Text("Aves",
                               style: TextStyle(
                                   fontSize: 20.0,
                                   color: Theme.of(context).primaryColorDark,

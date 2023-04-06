@@ -33,6 +33,8 @@ class _PlaceDetailState extends State<PlaceDetail> {
             children: [
               //CARRUSEL IMAGES
               const SizedBox(height:5),
+
+
               Column(
                 children: [
                   lugar.images!.length > 1
@@ -70,6 +72,7 @@ class _PlaceDetailState extends State<PlaceDetail> {
 
               Container(
                 width: double.infinity,
+
                 margin: EdgeInsets.only(
                     top: 18,
                     left: Themas.defaultMargin,
@@ -79,6 +82,8 @@ class _PlaceDetailState extends State<PlaceDetail> {
                   color: Themas.kGreyColor,
                   borderRadius: BorderRadius.circular(10),
                 ),
+
+                
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +91,7 @@ class _PlaceDetailState extends State<PlaceDetail> {
                     Center(
                       child: Text(
                         lugar.title!.toUpperCase(),
-                        style: Themas.yellowTextStyle.copyWith(
+                        style: Themas.titleTextStyle.copyWith(
                           fontSize: 22,
                           fontWeight: Themas.semiBold,
                         ),
@@ -173,7 +178,7 @@ class _PlaceDetailState extends State<PlaceDetail> {
                 ),
               ),
 
-              //  DESCRIPCION Y PARROQUIA
+              //  DESCRIPCION DE AVES
               Container(
                 margin: const EdgeInsets.only(left: 10, right: 10, bottom: 20),
                 padding: const EdgeInsets.all(25),
@@ -182,12 +187,122 @@ class _PlaceDetailState extends State<PlaceDetail> {
                   borderRadius: BorderRadius.circular(20),
                 ),
                 width: double.infinity,
+                
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+
+
                     Row(children: [
                       Text(
-                        'Descripción del Lugar',
+                        'Nombre',
+                        style: Themas.whiteTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: Themas.semiBold,
+                            color: Themas.kPrimaryColor),
+                      ),
+                      const SizedBox(width: 5),
+                      const Icon(
+                        Icons.contact_page,
+                        color: Colors.white,
+                        size: 18.0,
+                      ),
+                    ]),
+                    Text(
+                      lugar.name!,
+                      style: Themas.whiteTextStyle
+                          .copyWith(fontSize: 14, fontWeight: Themas.regular),
+                      textAlign: TextAlign.justify,
+                    ),
+
+                    Row(children: [
+                      Text(
+                        'Nombre Local',
+                        style: Themas.whiteTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: Themas.semiBold,
+                            color: Themas.kPrimaryColor),
+                      ),
+                      const SizedBox(width: 5),
+                      const Icon(
+                        Icons.home,
+                        color: Colors.white,
+                        size: 18.0,
+                      ),
+                    ]),
+                    Text(
+                      lugar.localname!,
+                      style: Themas.whiteTextStyle
+                          .copyWith(fontSize: 14, fontWeight: Themas.regular),
+                      textAlign: TextAlign.justify,
+                    ),
+                    Row(children: [
+                      Text(
+                        'Medidas',
+                        style: Themas.whiteTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: Themas.semiBold,
+                            color: Themas.kPrimaryColor),
+                      ),
+                      const SizedBox(width: 5),
+                      const Icon(
+                        Icons.square_foot,
+                        color: Colors.white,
+                        size: 18.0,
+                      ),
+                    ]),
+                    Text(
+                      lugar.measure!,
+                      style: Themas.whiteTextStyle
+                          .copyWith(fontSize: 14, fontWeight: Themas.regular),
+                      textAlign: TextAlign.justify,
+                    ),
+                    Row(children: [
+                      Text(
+                        'Canto',
+                        style: Themas.whiteTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: Themas.semiBold,
+                            color: Themas.kPrimaryColor),
+                      ),
+                      const SizedBox(width: 5),
+                      const Icon(
+                        Icons.audiotrack,
+                        color: Colors.white,
+                        size: 18.0,
+                      ),
+                    ]),
+                    Text(
+                      lugar.song!,
+                      style: Themas.whiteTextStyle
+                          .copyWith(fontSize: 14, fontWeight: Themas.regular),
+                      textAlign: TextAlign.justify,
+                    ),
+                    Row(children: [
+                      Text(
+                        'Observación',
+                        style: Themas.whiteTextStyle.copyWith(
+                            fontSize: 18,
+                            fontWeight: Themas.semiBold,
+                            color: Themas.kPrimaryColor),
+                      ),
+                      const SizedBox(width: 5),
+                      const Icon(
+                        Icons.visibility,
+                        color: Colors.white,
+                        size: 18.0,
+                      ),
+                    ]),
+                    Text(
+                      lugar.observation!,
+                      style: Themas.whiteTextStyle
+                          .copyWith(fontSize: 14, fontWeight: Themas.regular),
+                      textAlign: TextAlign.justify,
+                    ),
+
+                    Row(children: [
+                      Text(
+                        'Descripción',
                         style: Themas.whiteTextStyle.copyWith(
                             fontSize: 18,
                             fontWeight: Themas.semiBold,
@@ -206,21 +321,6 @@ class _PlaceDetailState extends State<PlaceDetail> {
                           .copyWith(fontSize: 14, fontWeight: Themas.regular),
                       textAlign: TextAlign.justify,
                     ),
-                    Row(children: [
-                      Text(
-                        'Parroquia',
-                        style: Themas.whiteTextStyle.copyWith(
-                            fontSize: 18,
-                            fontWeight: Themas.semiBold,
-                            color: Themas.kPrimaryColor),
-                      ),
-                      const SizedBox(width: 5),
-                      const Icon(
-                        Icons.place,
-                        color: Colors.white,
-                        size: 18.0,
-                      ),
-                    ]),
                        /* PARROQUIA */
                     // Text(
                     //   lugar.parroquia!,
@@ -230,6 +330,8 @@ class _PlaceDetailState extends State<PlaceDetail> {
                     // )
                   ],
                 ),
+
+
               ),
             ],
           )),

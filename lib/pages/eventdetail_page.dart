@@ -71,7 +71,7 @@ class _EventDetailState extends State<EventDetail> {
                     Center(
                       child: Text(
                         evento.title!.toUpperCase(),
-                        style: Themas.yellowTextStyle.copyWith(
+                        style: Themas.titleTextStyle.copyWith(
                           fontSize: 22,
                           fontWeight: Themas.semiBold,
                         ),
