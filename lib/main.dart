@@ -11,6 +11,7 @@ import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
 
 
+
 final internetChecker = CheckInternetConnection();
 void main() {
   runApp(MultiProvider(providers: [
