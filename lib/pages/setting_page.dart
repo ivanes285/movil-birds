@@ -91,7 +91,7 @@ class _SettingPageState extends State<SettingPage> {
                     Image.asset('assets/iconosetting.png',
                         height: 70, width: 70),
                     Text(
-                      'Pedro Moncayo Turístico',
+                      'Aviturismo Puerto Quito',
                       style: Themas.whiteTextStyle
                           .copyWith(color: Colors.white, fontSize: 10),
                     ),

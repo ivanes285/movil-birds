@@ -17,11 +17,11 @@ class ContactPage extends StatelessWidget {
                 child: Column(
           children: [
             const SizedBox(
-              height: 40.0,
+              height: 80.0,
             ),
             Image.asset(
               'assets/logo1.png',
-              height: 150,
+              height: 100,
             ),
             const SizedBox(
               height: 15.0,
@@ -36,7 +36,7 @@ class ContactPage extends StatelessWidget {
             const SizedBox(
               height: 5.0,
             ),
-            Text("GAD Municipal de Pedro Moncayo",
+            Text("GAD Municipal de Puerto Quito",
                 style: TextStyle(
                   color: Theme.of(context).primaryColorDark,
                   fontSize: 15.0,
@@ -66,7 +66,7 @@ class ContactPage extends StatelessWidget {
                     ),
                     onPressed: () {
                       _launchUrl(
-                          "https://www.youtube.com/channel/UCy1IblatwUaRmiDg9Qp9vDw");
+                          "https://www.youtube.com/@gadpuertoquito6772/featured");
                     },
                   ),
                   const SizedBox(height: 5),
@@ -91,7 +91,7 @@ class ContactPage extends StatelessWidget {
                       ],
                     ),
                     onPressed: () {
-                      _launchUrl("https://www.facebook.com/GADpedromoncayo");
+                      _launchUrl("https://www.facebook.com/puertoquitosocial");
                     },
                   ),
                   const SizedBox(height: 5),
@@ -116,7 +116,7 @@ class ContactPage extends StatelessWidget {
                       ],
                     ),
                     onPressed: () {
-                      _launchUrl("https://twitter.com/GADPedroMoncayo?s=20&t=PQJjxFjvFIu5Fnf2TXPqhw");
+                      _launchUrl("https://twitter.com/GADMPuertoQuito?s=20");
                     
                     },
                   ),
@@ -142,7 +142,7 @@ class ContactPage extends StatelessWidget {
                       ],
                     ),
                     onPressed: () {
-                      _launchUrl("https://www.instagram.com/gadpedromoncayo/");
+                      _launchUrl("https://www.instagram.com/puertoquitomunicipio/");
                     },
                   ),
                   const SizedBox(height: 5),
@@ -184,13 +184,13 @@ class ContactPage extends StatelessWidget {
               height: 4.0,
             ),
             InkWell(
-                child: const Text('munipm@pedromoncayo.gob.ec',
+                child: const Text('sistemas@puertoquito.gob.ec',
                     style: TextStyle(
                         color: Color(0xff005CA5),
                         decoration: TextDecoration.underline,
                         fontSize: 16)),
                 onTap: () {
-                  const toEmail = 'munipm@pedromoncayo.gob.ec';
+                  const toEmail = 'sistemas@puertoquito.gob.ec';
                   const subject = 'Sugerencia';
                   const message = 'Hola me gustaría hacer una sugerencia ..\n';
                   const url = 'mailto:$toEmail?subject=$subject&body=$message';
@@ -204,7 +204,7 @@ class ContactPage extends StatelessWidget {
 Future<void> _makePhoneCall() async {
   final Uri launchUri = Uri(
     scheme: 'tel',
-    path: '(02) 383-6560',
+    path: '(02)  2 156 034',
   );
 
   await launchUrl(launchUri);
