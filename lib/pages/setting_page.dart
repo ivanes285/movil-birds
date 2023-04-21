@@ -97,7 +97,7 @@ class _SettingPageState extends State<SettingPage> {
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'Versión 1.0.1',
+                      'Versión 1.0.0',
                       style: Themas.whiteTextStyle
                           .copyWith(color: Colors.white, fontSize: 10),
                     ),
