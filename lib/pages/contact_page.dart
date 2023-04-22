@@ -56,9 +56,9 @@ class ContactPage extends StatelessWidget {
                       textStyle: const TextStyle(fontSize: 20),
                       foregroundColor: Theme.of(context).primaryColorDark,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Icon(size: 30, color: Colors.red, UniconsLine.youtube),
                         SizedBox(width: 5),
                         Text("Míranos en YouTube")
@@ -130,9 +130,9 @@ class ContactPage extends StatelessWidget {
                       textStyle: const TextStyle(fontSize: 20),
                     foregroundColor: Theme.of(context).primaryColorDark,
                     ),
-                    child: Row(
+                    child:const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children:  [
                         Icon(
                             size: 30,
                             color: Color(0xffE34673),
@@ -154,9 +154,9 @@ class ContactPage extends StatelessWidget {
                       textStyle: const TextStyle(fontSize: 20),
                      foregroundColor: Theme.of(context).primaryColorDark,
                     ),
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
-                      children: const [
+                      children: [
                         Icon(
                             size: 30,
                             color: Color.fromARGB(255, 70, 227, 143),

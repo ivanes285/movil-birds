@@ -126,8 +126,8 @@ class _PlaceDetailState extends State<PlaceDetail> {
                             _onShareWithResult(context, lugar.title),
                         
                           },
-                          child: Column(
-                            children: const [
+                          child: const Column(
+                            children:  [
                               Icon(
                                 Icons.share,
                                 color: Colors.white,
@@ -192,7 +192,6 @@ class _PlaceDetailState extends State<PlaceDetail> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
 
-
                     Row(children: [
                       Text(
                         'Nombre',
@@ -208,6 +207,8 @@ class _PlaceDetailState extends State<PlaceDetail> {
                         size: 18.0,
                       ),
                     ]),
+
+                    
                     Text(
                       lugar.name!,
                       style: Themas.whiteTextStyle

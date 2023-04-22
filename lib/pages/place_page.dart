@@ -51,7 +51,7 @@ class Places {
                           ),
                         ),
                         Container(
-                          color: Color.fromARGB(255,57,97,179),
+                          color: const Color.fromARGB(255,57,97,179),
                           height: 70.0,
                           width: double.infinity,
                           child: Center(

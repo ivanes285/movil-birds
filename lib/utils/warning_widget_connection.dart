@@ -18,8 +18,8 @@ class WarningWidgetChangeNotifier extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 height: 60,
                 color: Colors.red,
-                child: Row(
-                  children: const [
+                child:const  Row(
+                  children: [
                     Icon(Icons.wifi_off),
                     SizedBox(width: 8),
                     Text("No hay conexion a internet")
